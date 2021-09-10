@@ -4,7 +4,8 @@ import ProductsRoute from "./routes/products.routes";
 
 const app = express();
 app.use(morgan("dev"));
+app.use(express.json());
 
-app.use("/product", ProductsRoute);
+app.use("/products", ProductsRoute);
 
 export default app;
